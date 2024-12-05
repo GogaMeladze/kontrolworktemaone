@@ -12,7 +12,19 @@
 # N=Cм / V * Na
 # print(N,'* 10**23')
 #3 задание(3 zadanie)
+import math
 
+def calculate_factorial(n):
+    if n < 0:
+        raise ValueError("Факториал не определен для отрицательных чисел")
+    return math.factorial(n)
+
+# Пример использования
+try:
+    number = int(input("Введите число для вычисления факториала: "))
+    print(f"Факториал {number} равен {calculate_factorial(number)}")
+except ValueError as e:
+    print(e)
 
 
 
